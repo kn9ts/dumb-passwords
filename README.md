@@ -19,10 +19,12 @@ const stupidPasswords = require('stupid-passwords');
 ...
 
 app.post('/user/create', (req, res) => {
-	if(stupidPasswords.isStupid(req.body.userPassword)) {
-		const frequency = stupidPasswords.userAmongstHowMany(req.body.userPassword);
+	const userPassword = req.body.userPassword;
+
+	if(stupidPasswords.isStupid(userPassword)) {
+		const rate = stupidPasswords.rateOfUsage(userPassword);
 		let message = 'That\'s a stupid password. For every 10,000 people, ';
-		message += frequency + ' are using that password';
+		message += rate + ' are using that password';
 
 		res.status(200).send(message);
 	} else{
