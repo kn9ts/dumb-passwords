@@ -1,6 +1,6 @@
 {
   "name": "stupid-passwords",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Guard your users from security problems that start by having stupid passwords",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,13 @@
   },
   "keywords": [
     "stupid",
-    "stupid",
-    "passwords",
     "password",
+    "stupid passwords",
     "common",
-    "passwords"
+    "common passwords",
+    "security",
+    "user",
+    "user password"
   ],
   "author": "Eugene Mutai <eugenemutai@gmail.com> (http://twitter.com/kn9ts)",
   "license": "MIT",
