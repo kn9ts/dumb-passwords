@@ -1,0 +1,37 @@
+{
+  "name": "stupid-passwords",
+  "version": "0.0.1",
+  "description": "Guard your users from security problems that start by having stupid passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "lint": "eslint --fix ./lib index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kn9ts/stupid-passwords.git"
+  },
+  "keywords": [
+    "stupid",
+    "stupid",
+    "passwords",
+    "password",
+    "common",
+    "passwords"
+  ],
+  "author": "Eugene Mutai <eugenemutai@gmail.com> (http://twitter.com/kn9ts)",
+  "license": "MIT",
+  "bugs": {
+    "email": "eugenemutai@gmail.com",
+    "url": "https://github.com/kn9ts/stupid-passwords/issues"
+  },
+  "homepage": "https://github.com/kn9ts/stupid-passwords#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.2",
+    "eslint-plugin-react": "^5.1.1"
+  }
+}
