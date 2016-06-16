@@ -7,8 +7,15 @@ of the top 10,000 worst passwords as analysed by a respectable IT security analy
 [Read about it all here](https://xato.net/10-000-top-passwords-6d6380716fe0#.473dkcjfm) or from
 [Wired](http://www.wired.com/2013/12/web-semantics-the-ten-thousand-worst-passwords/)
 
+## Getting Started
 
-## Very easy to use
+#### Installation
+
+```bash
+$ npm install stupid-passwords --save
+```
+
+#### Usage
 
 ```js
 'use strict';
@@ -42,10 +49,4 @@ app.listen(8080, () => {
 // expose app
 module.exports = app;
 
-```
-
-## Installation
-
-```bash
-$ npm install stupid-passwords --save
 ```
