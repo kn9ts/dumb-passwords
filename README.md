@@ -50,3 +50,21 @@ app.listen(8080, () => {
 module.exports = app;
 
 ```
+
+
+## API
+
+#### stupidPasswords.isStupid(string) => true or false
+
+Check if the string provided, representing the user's proposed submitted password is not one of the
+**top 10,000 worst passwords** users use.
+
+returns `true` if the password is one of them and `false` if the password is not.
+
+#### stupidPasswords.rateOfUsage(string) => {password, frequency}
+
+Checks and returns the recorded usage frequency of the related password
+
+```js
+stupidPasswords.rateOfUsage('superman') // { password: 'superman', frequency: 2523 }
+```
