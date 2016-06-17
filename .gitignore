@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/node,laravel,bower,justcode,linux,osx,jetbrains,sublimetext,vim,xcode
 
+## My
+lab/
+
 ### Node ###
 # Logs
 logs
@@ -88,7 +91,8 @@ bower_components
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
