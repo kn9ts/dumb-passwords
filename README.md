@@ -1,4 +1,4 @@
-# Stupid Passwords NPM Module
+![](http://res.cloudinary.com/dpmk2cnpi/image/upload/q_80/v1466166678/Screenshot_at_Jun_17_15-30-35_ufkfcq.png)
 
 > #### Guard your users from security problems such as being hacked that start by having stupid passwords
 
