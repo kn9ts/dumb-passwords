@@ -1,6 +1,6 @@
 {
   "name": "stupid-passwords",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "Guard your users from security problems that start by having stupid passwords",
   "main": "index.js",
   "scripts": {
