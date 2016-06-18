@@ -26,6 +26,9 @@ Short example:
 const stupidPasswords = require('stupid-passwords');
 
 const isStupid = stupidPasswords.isStupid('123456'); // true
+// or use:
+// const isStupid = stupidPasswords.isOneOfThem('123456');
+// const isStupid = stupidPasswords.check('123456');
 ```
 
 Embedding it into your [**EXPRESS**](http://expressjs.com/en/4x/api.html#app.post.method) application:
@@ -41,10 +44,12 @@ const stupidPasswords = require('stupid-passwords');
 app.post('/user/create', (req, res) => {
   const userPassword = req.body.userPassword;
 
-  if (stupidPasswords.isStupid(userPassword)) {
+  if (stupidPasswords.check(userPassword)) {
     const rate = stupidPasswords.rateOfUsage(userPassword);
-    let message = 'Dear user, that\'s a stupid password! Why? For every 100,000 user accounts on the internet, ';
-    message += rate.frequency + ' are "protected" using that same password. Hacker\'s paradise.';
+    let message = 'Dear user, that\'s a stupid password!';
+    message += ' Why? For every 100,000 user accounts on the internet, ';
+    message += rate.frequency + ' are "protected" using that same password.';
+    message += ' Hacker\'s paradise.';
 
     // DO NOT send this back to your user, it's only for demo purposes
     res.status(200).send(message);
