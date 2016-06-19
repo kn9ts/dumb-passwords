@@ -45,7 +45,7 @@ describe('stupidPassword.rateOfUsage()', () => {
   it('should return the rate of usage of a stupid password', () => {
     assert.deepEqual(stupidPassword.rateOfUsage('baseball'), {
       frequency: 3739,
-      hashedPassword: "6261736562616c6c",
+      hashedPassword: "yxpbyxii",
       password: 'baseball'
     });
     assert.isObject(stupidPassword.rateOfUsage('PrInCeSs'));
