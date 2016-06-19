@@ -45,7 +45,7 @@ describe('stupidPassword.rateOfUsage()', () => {
   it('should return the rate of usage of a stupid password', () => {
     assert.deepEqual(stupidPassword.rateOfUsage('baseball'), {
       frequency: 3739,
-      hashedPassword: "yxpbyxii",
+      hashedPassword: 'gfxjgfqq',
       password: 'baseball'
     });
     assert.isObject(stupidPassword.rateOfUsage('PrInCeSs'));
@@ -55,7 +55,7 @@ describe('stupidPassword.rateOfUsage()', () => {
     assert.deepEqual(stupidPassword.rateOfUsage('Wanderlust!*3000'), {
       frequency: 0,
       password: 'Wanderlust!*3000',
-      message: "The password is not part of the list"
+      message: 'The password is not part of the list'
     });
     assert.isObject(stupidPassword.rateOfUsage('SpaceOdessey2001Clarke'));
   });

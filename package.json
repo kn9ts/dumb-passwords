@@ -1,11 +1,13 @@
 {
   "name": "stupid-passwords",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Guard your users from security problems that start by having stupid passwords",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "lint": "eslint --fix ./lib index.js"
+    "istanbul": "istanbul cover _mocha -- --recursive",
+    "lint": "eslint --fix ./lib index.js",
+    "mocha": "mocha"
   },
   "repository": {
     "type": "git",
@@ -43,5 +45,8 @@
     "gulp-istanbul": "^0.10.4",
     "gulp-mocha": "^2.2.0",
     "run-sequence": "^1.2.1"
+  },
+  "dependencies": {
+    "istanbul": "^0.4.3"
   }
 }

@@ -1,5 +1,4 @@
 'use strict';
 
-(function () {
-  module.exports = require('./lib');
-})();
+const stupidPasswords = require('./lib');
+module.exports = stupidPasswords;
