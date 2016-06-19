@@ -3,6 +3,10 @@
 const chai = require('chai');
 const assert = chai.assert;
 const stupidPassword = require('../lib');
+const sinon = require("sinon");
+const sinonChai = require("sinon-chai");
+const expect = chai.expect;
+chai.use(sinonChai);
 
 describe('stupidPassword.isStupid()', () => {
   it('should pass for a stupid password', () => {
@@ -39,6 +43,14 @@ describe('stupidPassword.isStupid()', () => {
     assert.isFalse(stupidPassword.check('Pass990ver'));
     assert.isFalse(stupidPassword.check('ummoinnerEmbassava33'));
   });
+
+  it("should call the String toLowerCase method", function () {
+    const lower = sinon.spy(String.prototype, 'toLowerCase');
+    stupidPassword.isStupid('password');
+    lower.restore();
+    sinon.assert.calledOnce(lower);
+    sinon.assert.calledOn(lower, 'password');
+  });
 });
 
 describe('stupidPassword.rateOfUsage()', () => {
@@ -58,5 +70,13 @@ describe('stupidPassword.rateOfUsage()', () => {
       message: "The password is not part of the list"
     });
     assert.isObject(stupidPassword.rateOfUsage('SpaceOdessey2001Clarke'));
+  });
+
+  it("should call the String toLowerCase method", function () {
+    const lower = sinon.spy(String.prototype, 'toLowerCase');
+    stupidPassword.isStupid('football');
+    lower.restore();
+    sinon.assert.calledOnce(lower);
+    sinon.assert.calledOn(lower, 'football');
   });
 });
