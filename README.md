@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/kn9ts/dumb-passwords/badge.svg?branch=feature%2Ftests)](https://coveralls.io/github/kn9ts/dumb-passwords?branch=feature%2Ftests)
+[![Coverage Status](https://coveralls.io/repos/github/kn9ts/dumb-passwords/badge.svg?branch=master)](https://coveralls.io/github/kn9ts/dumb-passwords?branch=master)
 
 ![](http://res.cloudinary.com/dpmk2cnpi/image/upload/v1466589978/dumbPasswords_sxotda.png)
 
