@@ -11,7 +11,7 @@ const runSequence = require('run-sequence');
 if (!('COVERALLS_SERVICE_NAME' in process.env)) {
   process.env.COVERALLS_SERVICE_NAME = `${os.hostname()}.${os.platform()}-${os.release()}`;
 }
-process.env.COVERALLS_REPO_TOKEN = 'eyJVXus0Edofd2JMr7SJZeWlxLx6ZhRco';
+process.env.COVERALLS_REPO_TOKEN = 'gjhGzgDSI9fNMQxEM4RavtZaIUqfqO1QH';
 
 const filesToLint = [
   'gulpfile.js',
