@@ -17,7 +17,7 @@ const filesToLint = [
   'gulpfile.js',
   'lib/**/*.js',
   '!lib/config/**',
-  '!node_modules/**',
+  '!node_modules/**'
 ];
 
 gulp.task('lint', () => gulp.src(filesToLint)
@@ -37,7 +37,7 @@ gulp.task('test:backend', () => gulp.src(['test/**/*.js'])
   })
   .pipe(istanbul.writeReports({
     dir: './coverage',
-    reporters: ['html', 'lcov', 'text', 'json'],
+    reporters: ['html', 'lcov', 'text', 'json']
   })));
 
 gulp.task('coveralls', () => gulp.src('coverage/lcov.info').pipe(coveralls()));

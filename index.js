@@ -1,4 +1,4 @@
 'use strict';
 
-const stupidPasswords = require('./lib');
-module.exports = stupidPasswords;
+const dumbPasswords = require('./lib');
+module.exports = dumbPasswords;
