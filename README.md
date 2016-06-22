@@ -1,12 +1,12 @@
-[![Coverage Status](https://coveralls.io/repos/github/kn9ts/stupid-passwords/badge.svg?branch=feature%2Ftests)](https://coveralls.io/github/kn9ts/stupid-passwords?branch=feature%2Ftests)
+[![Coverage Status](https://coveralls.io/repos/github/kn9ts/dumb-passwords/badge.svg?branch=feature%2Ftests)](https://coveralls.io/github/kn9ts/dumb-passwords?branch=feature%2Ftests)
 
-![](http://res.cloudinary.com/dpmk2cnpi/image/upload/q_80/v1466166678/Screenshot_at_Jun_17_15-30-35_ufkfcq.png)
+![](http://res.cloudinary.com/dpmk2cnpi/image/upload/v1466589978/dumbPasswords_sxotda.png)
 
-> #### Guard your users from security problems such as being hacked that start by having stupid passwords
+> #### Guard your users from security problems such as being hacked that start by having dumb passwords
 
 ### Introduction
 
-`stupid-passwords` is an NPM module that can be used to verify **the user provided password is
+`dumb-passwords` is an NPM module that can be used to verify **the user provided password is
 not one of the top 10,000 worst passwords** as analysed by a respectable IT security analyst. Read
 about all [ here](https://xato.net/10-000-top-passwords-6d6380716fe0#.473dkcjfm),
 [here(wired)](http://www.wired.com/2013/12/web-semantics-the-ten-thousand-worst-passwords/) or
@@ -17,7 +17,7 @@ about all [ here](https://xato.net/10-000-top-passwords-6d6380716fe0#.473dkcjfm)
 #### Installation
 
 ```bash
-$ npm install stupid-passwords --save
+$ npm install dumb-passwords --save
 ```
 
 #### Usage
@@ -25,12 +25,11 @@ $ npm install stupid-passwords --save
 Short example:
 
 ```js
-const stupidPasswords = require('stupid-passwords');
+const dumbPasswords = require('dumb-passwords');
 
-const isStupid = stupidPasswords.isStupid('123456'); // true
+const isDumb = dumbPasswords.check('123456'); // true
 // or use:
-// const isStupid = stupidPasswords.isOneOfThem('123456');
-// const isStupid = stupidPasswords.check('123456');
+// const isDumb = dumbPasswords.checkPassword('123456');
 ```
 
 Embedding it into your [**EXPRESS**](http://expressjs.com/en/4x/api.html#app.post.method) application:
@@ -39,16 +38,16 @@ Embedding it into your [**EXPRESS**](http://expressjs.com/en/4x/api.html#app.pos
 'use strict';
 
 const app = require('express')();
-const stupidPasswords = require('stupid-passwords');
+const dumbPasswords = require('dumb-passwords');
 
 ...
 
 app.post('/user/create', (req, res) => {
   const userPassword = req.body.userPassword;
 
-  if (stupidPasswords.check(userPassword)) {
-    const rate = stupidPasswords.rateOfUsage(userPassword);
-    let message = 'Dear user, that\'s a stupid password!';
+  if (dumbPasswords.check(userPassword)) {
+    const rate = dumbPasswords.rateOfUsage(userPassword);
+    let message = 'Dear user, that\'s a dumb password!';
     message += ' Why? For every 100,000 user accounts on the internet, ';
     message += rate.frequency + ' are "protected" using that same password.';
     message += ' Hacker\'s paradise.';
@@ -74,19 +73,19 @@ module.exports = app;
 
 ## API
 
-#### stupidPasswords.isStupid(string) => true or false
+#### dumbPasswords.check(string) => true or false
 
 Check if the string provided, representing the user's proposed submitted password is not one of the
 **top 10,000 worst passwords** users use.
 
 returns `true` if the password is one of them and `false` if the password is not.
 
-#### stupidPasswords.rateOfUsage(string) => {password, frequency}
+#### dumbPasswords.rateOfUsage(string) => {password, frequency}
 
 Checks and returns the recorded usage frequency of the related password per 100,000 user passwords.
 
 ```js
-stupidPasswords.rateOfUsage('superman') // { password: 'superman', frequency: 2523 }
+dumbPasswords.rateOfUsage('superman') // { password: 'superman', frequency: 2523 }
 ```
 
 ### License
